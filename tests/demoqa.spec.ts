@@ -59,7 +59,7 @@ test("Handle new page", async ({ page, context }) => {
   await newPage.close();
   //await page.pause();
 });
-test("Handle popup window", async ({ page, context }) => {
+test("Handle popup window", async ({ page }) => {
   await page.goto("https://demoqa.com/browser-windows");
   const popupPromise = page.waitForEvent("popup");
   await page.getByText("New Window").first().click();
